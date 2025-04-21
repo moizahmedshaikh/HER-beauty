@@ -146,7 +146,6 @@ export default function Hero() {
     setTouchEnd(null);
     setIsDragging(false);
     setDragOffset(0);
-
     setTimeout(() => setIsAutoPlaying(true), 2000);
   };
 
