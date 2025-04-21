@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply font-century ;
+}
+
+@layer components {
+.nav_link {
+    @apply relative text-base font-medium w-fit block bg-[#f4cdd4] cursor-pointer;
+}
+
+.nav_link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    width: 100%;
+    height: 2px;
+    background-color: white; /* Tailwind yellow-400 */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav_link:hover::after {
+    transform: scaleX(1);
+}
+}
